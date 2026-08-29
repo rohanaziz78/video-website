@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ur" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URBAN SOLE | Premium Footwear Collection</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fbf7f3',
+                            100: '#f5efe6',
+                            500: '#d97706',
+                            600: '#b45309',
+                            900: '#1c1917',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Full Screen Hero Video Styling */
+        .hero-video-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(15,23,42,0.95) 100%);
+            z-index: 1;
+        }
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased font-sans">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-nav border-b border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <span class="text-2xl font-extrabold tracking-wider font-outfit uppercase bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500 bg-clip-text text-transparent">
+                        URBAN<span class="text-white font-light">SOLE</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Menu Navigation -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-300">
+                    <a href="#hero" class="hover:text-amber-400 transition-colors">Home</a>
+                    <a href="#categories" class="hover:text-amber-400 transition-colors">Categories</a>
+                    <a href="#products" class="hover:text-amber-400 transition-colors">New Arrivals</a>
+                    <a href="#about" class="hover:text-amber-400 transition-colors">About Us</a>
+                    <a href="#contact" class="hover:text-amber-400 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Action Icons -->
+                <div class="flex items-center space-x-5 text-slate-300">
+                    <button class="hover:text-amber-400 transition-colors p-2" aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                    </button>
+                    <button class="hover:text-amber-400 transition-colors p-2 relative" aria-label="Cart">
+                        <i class="fa-solid fa-bag-shopping text-lg"></i>
+                        <span class="absolute top-1 right-0 w-4 h-4 bg-amber-500 text-black font-bold text-[10px] rounded-full flex items-center justify-center">3</span>
+                    </button>
+                    <a href="#products" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-bold tracking-wider uppercase bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-full transition-all duration-300 transform hover:scale-105">
+                        Shop Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: FULL SCREEN HERO VIDEO -->
+    <section id="hero" class="hero-video-section flex items-center justify-center">
+        <!-- Background Video -->
+        <video class="hero-video" autoplay loop muted playsinline poster="">
+            <source src="hero-video.mp4" type="video/mp4">
+            <source src="hero-video.mp4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Dark Gradient Overlay -->
+        <div class="hero-overlay"></div>
+
+        <!-- Hero Content Overlay -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
+            <span class="inline-block px-4 py-1.5 mb-4 text-xs font-semibold uppercase tracking-widest bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-full backdrop-blur-sm">
+                New Season Collection 2026
+            </span>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold font-outfit text-white tracking-tight uppercase leading-none mb-6">
+                Step Into The <span class="bg-gradient-to-r from-amber-400 via-orange-300 to-amber-500 bg-clip-text text-transparent">Future</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Crafted for comfort, styled for the street. Experience unmatched durability and modern elegance with Urban Sole's latest handcrafted range.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#products" class="w-full sm:w-auto px-8 py-4 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold uppercase tracking-wider rounded-full shadow-lg shadow-amber-500/25 transition-all transform hover:-translate-y-0.5">
+                    Explore Collection <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#about" class="w-full sm:w-auto px-8 py-4 border border-slate-600 hover:border-slate-400 bg-slate-900/50 hover:bg-slate-800 text-white font-semibold rounded-full backdrop-blur-md transition-all">
+                    Discover Our Craft
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <a href="#categories" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center text-slate-400 hover:text-amber-400 transition-colors animate-bounce">
+            <span class="text-xs uppercase tracking-widest mb-2 font-medium">Scroll Down</span>
+            <i class="fa-solid fa-chevron-down text-sm"></i>
+        </a>
+    </section>
+
+    <!-- WEBSITE INDEX CONTENT BELOW VIDEO SECTION -->
+    <main class="relative z-20">
+
+        <!-- Features Banner -->
+        <section class="bg-slate-900 border-y border-slate-800 py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-4 p-2">
+                        <div class="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Free Express Delivery</h4>
+                            <p class="text-xs text-slate-400">On all nationwide orders</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start space-x-4 p-2">
+                        <div class="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">100% Genuine Leather</h4>
+                            <p class="text-xs text-slate-400">Premium handcrafted quality</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start space-x-4 p-2">
+                        <div class="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">30 Days Easy Return</h4>
+                            <p class="text-xs text-slate-400">Hassle-free money back</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start space-x-4 p-2">
+                        <div class="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">24/7 Dedicated Support</h4>
+                            <p class="text-xs text-slate-400">Customer assistance anytime</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="py-24 bg-slate-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Explore Categories</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold font-outfit text-white">Find Your Perfect Style</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Category Card 1 -->
+                    <div class="group relative rounded-2xl overflow-hidden glass-card h-96 transition-all duration-500 hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=800&auto=format&fit=crop" alt="Sneakers" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <span class="text-amber-400 text-xs uppercase font-bold tracking-wider">Streetwear</span>
+                            <h3 class="text-2xl font-bold font-outfit text-white mb-2">Urban Sneakers</h3>
+                            <p class="text-xs text-slate-300 mb-4 opacity-80">Ultra comfort designed for daily urban commute.</p>
+                            <a href="#products" class="inline-flex items-center text-sm font-bold text-amber-400 hover:text-amber-300 group-hover:translate-x-1 transition-all">
+                                View Collection <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Category Card 2 -->
+                    <div class="group relative rounded-2xl overflow-hidden glass-card h-96 transition-all duration-500 hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=800&auto=format&fit=crop" alt="Formal Shoes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <span class="text-amber-400 text-xs uppercase font-bold tracking-wider">Classic & Executive</span>
+                            <h3 class="text-2xl font-bold font-outfit text-white mb-2">Formal Oxfords</h3>
+                            <p class="text-xs text-slate-300 mb-4 opacity-80">Handcrafted premium full-grain leather Oxfords.</p>
+                            <a href="#products" class="inline-flex items-center text-sm font-bold text-amber-400 hover:text-amber-300 group-hover:translate-x-1 transition-all">
+                                View Collection <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Category Card 3 -->
+                    <div class="group relative rounded-2xl overflow-hidden glass-card h-96 transition-all duration-500 hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?q=80&w=800&auto=format&fit=crop" alt="Boots" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <span class="text-amber-400 text-xs uppercase font-bold tracking-wider">Outdoor & Rugged</span>
+                            <h3 class="text-2xl font-bold font-outfit text-white mb-2">Leather Boots</h3>
+                            <p class="text-xs text-slate-300 mb-4 opacity-80">Built for endurance with high-traction rubber soles.</p>
+                            <a href="#products" class="inline-flex items-center text-sm font-bold text-amber-400 hover:text-amber-300 group-hover:translate-x-1 transition-all">
+                                View Collection <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals Products Section -->
+        <section id="products" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                    <div>
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Top Selection</h2>
+                        <p class="text-3xl sm:text-4xl font-extrabold font-outfit text-white">New Arrivals</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 flex gap-2">
+                        <button class="px-4 py-2 bg-amber-500 text-slate-950 rounded-full font-bold text-xs">All Items</button>
+                        <button class="px-4 py-2 bg-slate-800 text-slate-300 hover:bg-slate-700 rounded-full font-semibold text-xs transition">Casual</button>
+                        <button class="px-4 py-2 bg-slate-800 text-slate-300 hover:bg-slate-700 rounded-full font-semibold text-xs transition">Formal</button>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <!-- Product Item 1 -->
+                    <div class="glass-card rounded-2xl p-4 group transition-all duration-300 hover:border-amber-500/40">
+                        <div class="relative rounded-xl overflow-hidden bg-slate-950 aspect-square mb-4">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop" alt="Red Urban Velocity" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase">HOT</span>
+                            <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/80 text-slate-300 hover:text-red-500 flex items-center justify-center transition">
+                                <i class="fa-regular fa-heart text-xs"></i>
+                            </button>
+                        </div>
+                        <span class="text-slate-400 text-xs">Sneakers</span>
+                        <h3 class="font-bold text-white text-base mb-1 group-hover:text-amber-400 transition-colors">Urban Velocity Red</h3>
+                        <div class="flex items-center text-amber-400 text-xs mb-3 space-x-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-slate-400 ml-1 text-[11px]">(48)</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-800">
+                            <span class="text-lg font-extrabold text-white font-outfit">$149.00</span>
+                            <button class="px-3 py-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5">
+                                <i class="fa-solid fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Item 2 -->
+                    <div class="glass-card rounded-2xl p-4 group transition-all duration-300 hover:border-amber-500/40">
+                        <div class="relative rounded-xl overflow-hidden bg-slate-950 aspect-square mb-4">
+                            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=600&auto=format&fit=crop" alt="Apex Runner Light" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase">NEW</span>
+                            <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/80 text-slate-300 hover:text-red-500 flex items-center justify-center transition">
+                                <i class="fa-regular fa-heart text-xs"></i>
+                            </button>
+                        </div>
+                        <span class="text-slate-400 text-xs">Running</span>
+                        <h3 class="font-bold text-white text-base mb-1 group-hover:text-amber-400 transition-colors">Apex Runner Pro</h3>
+                        <div class="flex items-center text-amber-400 text-xs mb-3 space-x-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-slate-400 ml-1 text-[11px]">(32)</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-800">
+                            <span class="text-lg font-extrabold text-white font-outfit">$179.00</span>
+                            <button class="px-3 py-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5">
+                                <i class="fa-solid fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Item 3 -->
+                    <div class="glass-card rounded-2xl p-4 group transition-all duration-300 hover:border-amber-500/40">
+                        <div class="relative rounded-xl overflow-hidden bg-slate-950 aspect-square mb-4">
+                            <img src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?q=80&w=600&auto=format&fit=crop" alt="Classic Tan Chelsea" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/80 text-slate-300 hover:text-red-500 flex items-center justify-center transition">
+                                <i class="fa-regular fa-heart text-xs"></i>
+                            </button>
+                        </div>
+                        <span class="text-slate-400 text-xs">Leather Boots</span>
+                        <h3 class="font-bold text-white text-base mb-1 group-hover:text-amber-400 transition-colors">Classic Tan Chelsea</h3>
+                        <div class="flex items-center text-amber-400 text-xs mb-3 space-x-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-slate-400 ml-1 text-[11px]">(64)</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-800">
+                            <span class="text-lg font-extrabold text-white font-outfit">$210.00</span>
+                            <button class="px-3 py-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5">
+                                <i class="fa-solid fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Item 4 -->
+                    <div class="glass-card rounded-2xl p-4 group transition-all duration-300 hover:border-amber-500/40">
+                        <div class="relative rounded-xl overflow-hidden bg-slate-950 aspect-square mb-4">
+                            <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=600&auto=format&fit=crop" alt="Vanguard Leather Loafers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase">SALE</span>
+                            <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/80 text-slate-300 hover:text-red-500 flex items-center justify-center transition">
+                                <i class="fa-regular fa-heart text-xs"></i>
+                            </button>
+                        </div>
+                        <span class="text-slate-400 text-xs">Casual Formal</span>
+                        <h3 class="font-bold text-white text-base mb-1 group-hover:text-amber-400 transition-colors">Vanguard Penny Loafers</h3>
+                        <div class="flex items-center text-amber-400 text-xs mb-3 space-x-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="text-slate-400 ml-1 text-[11px]">(19)</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-800">
+                            <div>
+                                <span class="text-lg font-extrabold text-white font-outfit">$129.00</span>
+                                <span class="text-xs text-slate-500 line-through ml-1">$160</span>
+                            </div>
+                            <button class="px-3 py-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5">
+                                <i class="fa-solid fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Story / Craftsmanship Section -->
+        <section id="about" class="py-24 bg-slate-950 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2 block">Our Heritage</span>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold font-outfit text-white mb-6 leading-tight">
+                            Crafted With Passion, Built for Endurance.
+                        </h2>
+                        <p class="text-slate-300 text-base leading-relaxed mb-6">
+                            At Urban Sole, every pair of shoes tells a story of unmatched artistry. We blend time-honored footwear traditions with cutting-edge comfort tech to bring you shoes that look flawless and feel extraordinary.
+                        </p>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                            From selected leather hides to precision sole stitching, our expert craftsmen scrutinize every single detail to ensure long-lasting durability.
+                        </p>
+                        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-slate-800">
+                            <div>
+                                <span class="text-3xl font-extrabold font-outfit text-amber-400">100%</span>
+                                <p class="text-xs text-slate-400 mt-1">Genuine Leather</p>
+                            </div>
+                            <div>
+                                <span class="text-3xl font-extrabold font-outfit text-amber-400">50K+</span>
+                                <p class="text-xs text-slate-400 mt-1">Happy Customers</p>
+                            </div>
+                            <div>
+                                <span class="text-3xl font-extrabold font-outfit text-amber-400">25+</span>
+                                <p class="text-xs text-slate-400 mt-1">Global Outlets</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="relative rounded-3xl overflow-hidden border border-slate-800 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1000&auto=format&fit=crop" alt="Shoe Craftsmanship" class="w-full h-auto object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 p-6 rounded-2xl bg-slate-900 border border-slate-800 hidden sm:block">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl font-bold">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Certified Excellence</h4>
+                                    <p class="text-xs text-slate-400">Award winning design 2026</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Subscription -->
+        <section class="py-20 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-800">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <div class="w-16 h-16 rounded-full bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mx-auto mb-6">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+                <h2 class="text-3xl font-extrabold font-outfit text-white mb-3">Join The Urban Sole Club</h2>
+                <p class="text-slate-400 text-sm mb-8 max-w-lg mx-auto">Subscribe to get exclusive early access to new collection releases, special sales, and 15% off your first purchase.</p>
+                <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                    <input type="email" placeholder="Enter your email address" required class="flex-1 px-5 py-3.5 rounded-full bg-slate-800 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400">
+                    <button type="submit" class="px-8 py-3.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm rounded-full uppercase tracking-wider transition">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-slate-950 text-slate-400 pt-16 pb-8 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <a href="#" class="text-2xl font-extrabold font-outfit uppercase tracking-wider text-white inline-block mb-4">
+                        URBAN<span class="text-amber-400 font-light">SOLE</span>
+                    </a>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Redefining urban footwear standards. Crafted for modern lifestyle and built with uncompromising quality.
+                    </p>
+                    <div class="flex space-x-3 text-slate-400">
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-amber-500 hover:text-black flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-amber-500 hover:text-black flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-amber-500 hover:text-black flex items-center justify-center transition"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Shop Collections</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#products" class="hover:text-amber-400 transition">Men's Sneakers</a></li>
+                        <li><a href="#products" class="hover:text-amber-400 transition">Formal Oxfords</a></li>
+                        <li><a href="#products" class="hover:text-amber-400 transition">Leather Boots</a></li>
+                        <li><a href="#products" class="hover:text-amber-400 transition">Casual Loafers</a></li>
+                        <li><a href="#products" class="hover:text-amber-400 transition">New Season Release</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Customer Support</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#" class="hover:text-amber-400 transition">Order Tracking</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition">Shipping & Delivery Policy</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition">Return & Exchange</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition">Size Guide</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition">Store Locator</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-amber-400 mt-0.5"></i>
+                            <span>Urban Sole Flagship Store, Main Boulevard, Gulberg III, Lahore</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-amber-400"></i>
+                            <span>+92 (042) 111-872-267</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-amber-400"></i>
+                            <span>support@urbansole.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 text-center md:flex md:justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 Urban Sole. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 flex justify-center space-x-6">
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400">Terms of Service</a>
+                    <a href="#" class="hover:text-slate-400">Cookies Settings</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
